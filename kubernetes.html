@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8"/>
+    <title>Kubernetes basics</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<div>
+    <div class="sidebar">
+        <img src="logo.png" alt="logo showing terminal symbol">
+        <a href="index.html" class="sidebar-item">Home</a>
+        <a href="kubernetes.html" class="sidebar-item">Kubernetes basics</a>
+        <ul class="sidebar-item">
+            <li><a href="containers.html" class="sidebar-item">Containers</a></li>
+            <li><a href="docker.html" class="sidebar-item">Docker</a></li>
+            <li><a href="docker-compose.html" class="sidebar-item">Docker-compose</a></li>
+        </ul>
+        <a href="kubectl.html" class="sidebar-item">The <span class="code">kubectl</span> command</a>
+        <a href="flux.html" class="sidebar-item">Flux</a>
+        <a href="helm.html" class="sidebar-item">Helm</a>
+    </div>
+
+    <div class="content">
+        <h1>Kubernetes</h1>
+        <p>A short introduction</p>
+        <h2>What is kubernetes?</h2>
+        <p>From the docs:</p>
+        <div class="block-quote">
+            <p>Kubernetes is an open-source system for automating deployment, scaling, and management of
+                containerized applications</p>
+        </div>
+        <p>Essentially, kubernetes allows us to run applications on VMs from configurations, with a suite of tools that
+            aid uptime, scaling, and management</p>
+        <h2>Features</h2>
+        <p>We make use of a variety of features at INSIGHT, but kubernetes is known for its flexibility:</p>
+        <div class="collapsible">
+            <button type="button" class="collapsible-button">Orchestration</button>
+            <div class="collapsible-content">
+                Manage infrastructure as code with kustomize, helm, and flux. Progressively roll out changes to
+                containers, and maintain ability to roll-back if necessary.
+            </div>
+        </div>
+        <div class="collapsible">
+            <button type="button" class="collapsible-button">Self-healing</button>
+            <div class="collapsible-content">
+                Automatically restart containers that fail, reschedule deployments after failure, and kill containers
+                that don't respond to a health-check.
+            </div>
+        </div>
+        <div class="collapsible">
+            <button type="button" class="collapsible-button">Secret management</button>
+            <div class="collapsible-content">
+                Connect to external secret repositories or deploy internally without rebuilding images or exposing
+                secrets in-configuration
+            </div>
+        </div>
+        <div class="collapsible">
+            <button type="button" class="collapsible-button">Storage management</button>
+            <div class="collapsible-content">
+                Mount containers as drives, from local storage, over networks, or cloud providers such as <a
+                    href="https://aws.amazon.com/products/storage/">AWS</a> or <a
+                    href="https://cloud.google.com/storage/">GCP</a>
+            </div>
+        </div>
+        <div class="collapsible">
+            <button type="button" class="collapsible-button">Scaling</button>
+            <div class="collapsible-content">
+                Manage scaling with commands, UI, or automatically based on CPU usage, tasks, or other metrics
+            </div>
+        </div>
+        <h2>Basics</h2>
+        <p>There are a number of concepts that are useful to understand before beginning use of kubernetes:</p>
+        <ul>
+            <li><a href="containers.html">Containers</a></li>
+            <li>
+                <ul>
+                    <li>A way of packaging software</li>
+                </ul>
+            </li>
+            <li><a href="docker.html">Containers</a></li>
+            <li>
+                <ul>
+                    <li>A way to define, run, and version containers</li>
+                </ul>
+            </li>
+            <li><a href="docker-compose.html">Docker-compose</a></li>
+            <li>
+                <ul>
+                    <li>A way to run several containers simultaneously</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="collapsible.js"></script>
+</div>
+</body>
+</html>
